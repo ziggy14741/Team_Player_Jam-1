@@ -9,8 +9,8 @@ public class Scoringgreen : MonoBehaviour
 
         private void OnTriggerEnter2D(Collider2D collision)
         {
-            if (collision.tag == "Circle Score")
-            {
+        if (collision.tag != "Triangle Score" && collision.tag != "Square Score")
+        {
                 circle++;
                 soundeffect.Play();
                 Destroy(collision.gameObject);

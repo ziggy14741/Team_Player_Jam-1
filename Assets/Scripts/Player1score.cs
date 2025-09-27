@@ -1,22 +1,21 @@
 using System.Collections;
 using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 
-public class Scoringblue : MonoBehaviour
-{public float triangle = 0;
+public class Player1score : MonoBehaviour
+{
+    public float Player_1_Score = 0;
     public AudioSource soundeffect;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.tag != "Square Score" && collision.tag != "Circle Score")
+
+        if (collision.tag == "Player 1 Scores")
         {
-            triangle++;
+            Player_1_Score++;
             soundeffect.Play();
             Destroy(collision.gameObject);
-
         }
+
     }
-} 
-   
-    
+}

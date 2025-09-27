@@ -65,6 +65,8 @@ public class PlayerPickUpObject : MonoBehaviour {
         // Move object to player's hand
         _heldObject.transform.position = pickupPoint.position;
         _heldObject.transform.SetParent(transform);
+
+        _heldObject.GetComponent<PlayerTags>().mode = _playerMovement.isPlayerOne ? 1 : 2;
     }
 
     /// <summary>

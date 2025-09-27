@@ -9,14 +9,13 @@ public class Scoringtrash : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.tag == "Square score")
+        if (collision.tag != "Triangle Score" && collision.tag != "Circle Score")
         {
             square++;
             soundeffect.Play();
             Destroy(collision.gameObject);
 
         }
-
     }
 }
 
